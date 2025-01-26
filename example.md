@@ -1,3 +1,9 @@
+---
+layout: default
+title: Processing Example
+---
+
+
 # Drawing Shapes in Processing
 
 This is a simple guide to help you get started with shapes in **Processing**.
