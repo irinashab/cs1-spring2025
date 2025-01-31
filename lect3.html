@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS1: Lesson 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <script type="text/javascript">
+    MathJax = {
+        tex: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [['$$', '$$']]
+        }
+    };
+</script>
+<script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+       ul {
+    list-style-type: disc;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+ul ul {
+    list-style-type: circle; /* For nested lists */
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin: 5px 0; /* Adds spacing between list items */
+}
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        h3 {
+            margin-bottom: 0; /* Removes bottom margin */
+            padding-bottom: 0; /* Removes bottom padding */
+        }
+    <\style>
+        <style type="text/css">
+      @media (prefers-color-scheme: dark) {
+         html {
+           filter: invert(100%);
+        }
+
+        .youtube-container iframe {
+          filter: invert(100%);
+        }
+
+        .noreverse {
+          filter: invert(100%);
+        }
+      }
+    
+
+      .youtube-container {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+      }
+
+      .youtube-container iframe {
+        height: 100%;
+        width: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+    </style>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+    </script>
+</head>
+  <body>
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Lesson_3_More_Interactions_0"></a>Lesson 3: More Interactions</h1>
+<h2 class="code-line" data-line-start=2 data-line-end=3 ><a id="Interaction_with_the_Mouse_2"></a>Interaction with the Mouse</h2>
+<p class="has-line-data" data-line-start="4" data-line-end="5">Java (and subsequently Processing) has event listeners that listen for messages from the operating system, such as:</p>
+<ul>
+<li class="has-line-data" data-line-start="6" data-line-end="7">“The mouse moved within the canvas.”</li>
+<li class="has-line-data" data-line-start="7" data-line-end="9">“The mouse was clicked at this point on the canvas.”</li>
+</ul>
+<p class="has-line-data" data-line-start="9" data-line-end="10">When such an event occurs, the program performs an action and then waits for more messages.</p>
+<h3 class="code-line" data-line-start=11 data-line-end=12 ><a id="Builtin_Mouse_Variables_11"></a>Built-in Mouse Variables</h3>
+<p class="has-line-data" data-line-start="12" data-line-end="13">To enable interactivity, we need <code>setup()</code> and <code>draw()</code> functions. Processing provides built-in keywords:</p>
+<ul>
+<li class="has-line-data" data-line-start="14" data-line-end="15"><code>mouseX</code> - stores the <strong>x-coordinate</strong> of the mouse.</li>
+<li class="has-line-data" data-line-start="15" data-line-end="17"><code>mouseY</code> - stores the <strong>y-coordinate</strong> of the mouse.</li>
+</ul>
+<h4 class="code-line" data-line-start=17 data-line-end=18 ><a id="Example_Following_the_Mouse_17"></a>Example: Following the Mouse</h4>
+<pre><code class="has-line-data" data-line-start="19" data-line-end="30" class="language-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{ 
+  size(<span class="hljs-number">480</span>, <span class="hljs-number">270</span>); 
+  noStroke(); 
+} 
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{ 
+  background(<span class="hljs-number">255</span>); 
+  fill(<span class="hljs-number">29</span>, <span class="hljs-number">215</span>, <span class="hljs-number">112</span>); <span class="hljs-comment">// Shade of green</span>
+  circle(mouseX, mouseY, <span class="hljs-number">50</span>); 
+}
+</code></pre>
+<p class="has-line-data" data-line-start="30" data-line-end="31">The circle <strong>follows</strong> the mouse!</p>
+<h3 class="code-line" data-line-start=32 data-line-end=33 ><a id="Try_This_32"></a>Try This:</h3>
+<ol>
+<li class="has-line-data" data-line-start="33" data-line-end="35">Move <code>background()</code> from <code>draw()</code> to <code>setup()</code> and observe the difference.
+<ul>
+<li class="has-line-data" data-line-start="34" data-line-end="35"><strong>Can you explain what happens?</strong></li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="35" data-line-end="38">Return <code>background()</code> to <code>draw()</code>, then use <code>mouseX</code> and <code>mouseY</code> as fill colors.
+<ul>
+<li class="has-line-data" data-line-start="36" data-line-end="38"><strong>Why is the initial color dark? Why does it lighten when moving the mouse to the lower-right corner?</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="code-line" data-line-start=40 data-line-end=41 ><a id="Creating_More_Interesting_Movements_40"></a>Creating More Interesting Movements</h2>
+<p class="has-line-data" data-line-start="41" data-line-end="42">Instead of having the circle <strong>exactly</strong> follow the mouse, we can modify its position:</p>
+<pre><code class="has-line-data" data-line-start="44" data-line-end="58" class="language-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{ 
+  size(<span class="hljs-number">500</span>, <span class="hljs-number">500</span>); 
+  noStroke(); 
+  noCursor(); <span class="hljs-comment">// Hides the cursor </span>
+  fill(<span class="hljs-number">232</span>, <span class="hljs-number">23</span>, <span class="hljs-number">200</span>); <span class="hljs-comment">// Pinkish color</span>
+} 
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{ 
+  background(<span class="hljs-number">126</span>); <span class="hljs-comment">// Shade of gray</span>
+  ellipse(mouseX, mouseY, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);    <span class="hljs-comment">// Top circle</span>
+  ellipse(mouseX + <span class="hljs-number">30</span>, mouseY + <span class="hljs-number">45</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>); <span class="hljs-comment">// Middle circle</span>
+  ellipse(mouseX - <span class="hljs-number">30</span>, mouseY + <span class="hljs-number">80</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>); <span class="hljs-comment">// Bottom circle</span>
+}
+</code></pre>
+<p class="has-line-data" data-line-start="58" data-line-end="59"><strong>Observation:</strong> The three circles stay at fixed distances from each other!</p>
+<h4 class="code-line" data-line-start=60 data-line-end=61 ><a id="Example_Scaled_Offsets_60"></a>Example: Scaled Offsets</h4>
+<pre><code class="has-line-data" data-line-start="62" data-line-end="76" class="language-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{ 
+  size(<span class="hljs-number">500</span>, <span class="hljs-number">500</span>); 
+  noStroke(); 
+  noCursor(); 
+  fill(<span class="hljs-number">232</span>, <span class="hljs-number">23</span>, <span class="hljs-number">200</span>); 
+} 
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{ 
+  background(<span class="hljs-number">126</span>); 
+  ellipse(mouseX, mouseY, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);    <span class="hljs-comment">// Top circle</span>
+  ellipse(mouseX / <span class="hljs-number">2</span>, mouseY + <span class="hljs-number">45</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>); <span class="hljs-comment">// Middle circle</span>
+  ellipse(<span class="hljs-number">2</span> * mouseX, mouseY + <span class="hljs-number">80</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>); <span class="hljs-comment">// Bottom circle</span>
+}
+</code></pre>
+<p class="has-line-data" data-line-start="76" data-line-end="77">Multiplying or dividing <code>mouseX</code> and <code>mouseY</code> creates <strong>scaled offsets</strong>.</p>
+<hr>
+<h2 class="code-line" data-line-start=80 data-line-end=81 ><a id="Previous_Mouse_Position_80"></a>Previous Mouse Position</h2>
+<p class="has-line-data" data-line-start="81" data-line-end="82">Processing provides:</p>
+<ul>
+<li class="has-line-data" data-line-start="83" data-line-end="84"><code>pmouseX</code> - stores the <strong>previous</strong> x-coordinate of the mouse.</li>
+<li class="has-line-data" data-line-start="84" data-line-end="86"><code>pmouseY</code> - stores the <strong>previous</strong> y-coordinate of the mouse.</li>
+</ul>
+<p class="has-line-data" data-line-start="86" data-line-end="87">If the mouse is <strong>still</strong>, these values are the same as <code>mouseX</code> and <code>mouseY</code>. If the mouse <strong>moves quickly</strong>, the difference increases.</p>
+<h4 class="code-line" data-line-start=88 data-line-end=89 ><a id="Example_Observing_pmouseX__mouseX_88"></a>Example: Observing <code>pmouseX</code> &amp; <code>mouseX</code></h4>
+<pre><code class="has-line-data" data-line-start="90" data-line-end="99" class="language-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{ 
+  size(<span class="hljs-number">500</span>, <span class="hljs-number">500</span>); 
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{ 
+  frameRate(<span class="hljs-number">12</span>); 
+  println(pmouseX - mouseX); 
+}
+</code></pre>
+<p class="has-line-data" data-line-start="99" data-line-end="100">Move the mouse <strong>slowly and quickly</strong> to see the changing values in the console.</p>
+<h4 class="code-line" data-line-start=101 data-line-end=102 ><a id="Example_Drawing_a_Trail_101"></a>Example: Drawing a Trail</h4>
+<pre><code class="has-line-data" data-line-start="103" data-line-end="114" class="language-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{ 
+  size(<span class="hljs-number">480</span>, <span class="hljs-number">270</span>); 
+  background(<span class="hljs-number">255</span>); 
+  strokeWeight(<span class="hljs-number">5</span>); <span class="hljs-comment">// Line width</span>
+  stroke(<span class="hljs-number">237</span>, <span class="hljs-number">123</span>, <span class="hljs-number">42</span>); <span class="hljs-comment">// Line color</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{ 
+  line(mouseX, mouseY, pmouseX, pmouseY); 
+}
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=117 data-line-end=118 ><a id="Mouse_Clicks__Key_Presses_117"></a>Mouse Clicks &amp; Key Presses</h2>
+<p class="has-line-data" data-line-start="118" data-line-end="119">Processing can also respond to <strong>mouse clicks</strong> and <strong>key presses</strong> with:</p>
+<pre><code class="has-line-data" data-line-start="121" data-line-end="129" class="language-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mousePressed</span><span class="hljs-params">()</span> </span>{ 
+  <span class="hljs-comment">// Code for mouse click event</span>
+} 
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">keyPressed</span><span class="hljs-params">()</span> </span>{ 
+  <span class="hljs-comment">// Code for key press event</span>
+}
+</code></pre>
+<h4 class="code-line" data-line-start=130 data-line-end=131 ><a id="Example_Interactive_Drawing_130"></a>Example: Interactive Drawing</h4>
+<pre><code class="has-line-data" data-line-start="132" data-line-end="149" class="language-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{ 
+  size(<span class="hljs-number">480</span>, <span class="hljs-number">270</span>); 
+  background(<span class="hljs-number">255</span>); 
+  noStroke(); 
+  fill(<span class="hljs-number">40</span>, <span class="hljs-number">250</span>, <span class="hljs-number">122</span>); 
+} 
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mousePressed</span><span class="hljs-params">()</span> </span>{ 
+  circle(mouseX, mouseY, <span class="hljs-number">16</span>); 
+} 
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">keyPressed</span><span class="hljs-params">()</span> </span>{ 
+  background(<span class="hljs-number">255</span>); <span class="hljs-comment">// Clears the screen</span>
+}
+</code></pre>
+<p class="has-line-data" data-line-start="149" data-line-end="150"><strong>Explanation:</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="150" data-line-end="151">Clicking the mouse <strong>draws a small circle</strong> where the cursor is.</li>
+<li class="has-line-data" data-line-start="151" data-line-end="153">Pressing <strong>any key</strong> resets the background, <strong>erasing all circles</strong>.</li>
+</ul>
+<hr>
+<p class="has-line-data" data-line-start="154" data-line-end="155">Keep experimenting to create more dynamic visuals!</p>
+
+</body></html>
