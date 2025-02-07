@@ -129,6 +129,7 @@ a = <span class="hljs-number">3</span>;         <span class="hljs-comment">// a 
 </code></pre>
 <p class="has-line-data" data-line-start="125" data-line-end="126">The third line changes the value of a, but it does not change the value of b, so they are no longer equal.</p>
 <p class="has-line-data" data-line-start="127" data-line-end="128">Taken together, the variables in a program and their current values make up the program’s state. Figure below shows the state of the program after these assignment statements run.</p>
+  <p><img src="assets/images/memdiagram.png" alt="picturing the memory diagram" title="memory diagram" width="238" height="188"></p>
 <p class="has-line-data" data-line-start="129" data-line-end="130">Diagrams like this one that show the state of the program are called <strong>memory diagrams</strong>. Each variable is represented with a box showing the name of the variable on the outside and its current value inside.</p>
 <p class="has-line-data" data-line-start="131" data-line-end="132">As the program runs, the state of memory changes, so memory diagrams show only a particular point in time. For example, if we added the line <code>int c = 0;</code> to the previous example, how will the memory diagram change?</p>
 <h2 class="code-line" data-line-start=133 data-line-end=134 ><a id="Images_Fonts_and_All_That_Jazz_133"></a><strong>Images, Fonts, and All That Jazz</strong></h2>
@@ -152,6 +153,7 @@ a = <span class="hljs-number">3</span>;         <span class="hljs-comment">// a 
 <p class="has-line-data" data-line-start="154" data-line-end="157"><strong>Note: Loading an image is an expensive operation.</strong><br>
 <strong>Always load it once in <code>setup()</code>, not in <code>draw()</code>.</strong><br>
 Once you add an image to your sketch, Processing will automatically create a folder named <strong><code>data</code></strong> to store it. Now your Processing sketch folder looks like this:</p>
+  <p><img src="assets/images/data.png" alt="picturing the data folder" title="data folder" width="546" height="381"></p>
 <h3 class="code-line" data-line-start=158 data-line-end=159 ><a id="2_Displaying_an_Image_158"></a><strong>2. Displaying an Image</strong></h3>
 <p class="has-line-data" data-line-start="159" data-line-end="160">After loading the image, you can display it on the canvas using the <code>image()</code> function:</p>
 <pre><code class="has-line-data" data-line-start="162" data-line-end="166" class="language-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
