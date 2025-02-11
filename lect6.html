@@ -1,0 +1,228 @@
+I have converted your `.pptx` file to Markdown. Here is the extracted content:
+
+```markdown
+# All You Have to Know About Conditionals
+
+## What is an Algorithm?
+An algorithm is a set of steps used to complete a specific task. It serves as a building block for programming. Algorithms allow computers, smartphones, and websites to function and make decisions.
+
+**Example: A Cooking Recipe**
+
+## Flow of Control
+Flow of control refers to the order in which a program performs actions. Typically, the execution follows a **sequential** order. However:
+- A **branching statement** chooses between two or more possible actions.
+- A **loop statement** repeats an action until a stopping condition occurs.
+
+## Flow Charts
+A **flow chart** is a graphical representation of an algorithm using various symbols to depict different types of actions or decisions. It helps in visually understanding the flow of logic in a program.
+
+### Common Flow Chart Symbols:
+- **Oval**: Represents the start or end of the process.
+- **Rectangle**: Represents a process or instruction.
+- **Diamond**: Represents a decision (e.g., an `if` condition).
+- **Arrows**: Indicate the flow of control.
+
+### Example: Rolling a Die (Flow Chart)
+
+## Pseudocode
+**Pseudocode** describes an algorithm using structured, human-readable steps without the strict syntax of a programming language. It helps in planning logic before coding.
+
+### Example:
+```plaintext
+START
+SET roll to a random number between 1 and 6
+PRINT roll
+IF roll is greater than 3 THEN
+    PRINT "You won!"
+ELSE
+    PRINT "Sorry, you lost."
+END IF
+END
+```
+Pseudocode is useful for designing logic before implementation in actual programming languages.
+
+## The Basic `if()` Statement
+```java
+if (condition) {
+    statement(s) to perform when the condition is true
+}
+```
+- The **condition** is usually a comparison.
+- A true-or-false comparison is also known as a **Boolean expression**, named after **George Boole (1815-1864).**
+
+### Relational Operators:
+- `>` Greater than
+- `<` Less than
+- `>=` Greater than or equal to
+- `<=` Less than or equal to
+- `!=` Not equal to
+- `==` Equal to (not to be confused with `=`, the assignment operator)
+
+### True or False?
+Evaluate the following expressions:
+- `2 > 5`
+- `3 < 10`
+- `2 >= 2`
+- `5 <= 10`
+- `4 != 5`
+- `7 == 7`
+
+## Rolling a Die: Code Example
+```java
+int roll;
+roll = int(random(1, 7));
+println("Roll: " + roll);
+if (roll > 3) {
+    println("You win!");
+}
+```
+
+## Common Pitfalls with Conditionals
+### Using `=` instead of `==`
+In many programming languages:
+- `=` is used for **assignment**.
+- `==` is used for **comparison**.
+
+**Incorrect Code:**
+```java
+int x = 5;
+if (x = 10) {  // This will cause an error!
+    println("x is 10");
+}
+```
+
+### Forgetting Curly Braces `{}`:
+If you omit curly braces, only the first statement after the `if` executes.
+
+```java
+if (x > 5)
+    println("x is greater than 5");  // This executes
+    println("This will always execute!");  // Always executes, even if the condition is false.
+```
+
+## The `if`-`else` Statement
+```java
+if (condition) {
+    // Statement(s) to perform if the condition is true
+} else {
+    // Statement(s) to perform if the condition is false
+}
+```
+
+## Rolling a Die: Updated Code
+```java
+int roll;
+roll = int(random(1, 7));
+println("Roll: " + roll);
+if (roll == 6) {
+    println("You won!");
+} else {
+    println("Sorry, you lost.");
+}
+```
+
+## Nested `if-else-if` Statements
+
+## Logical Operators:
+### AND (`&&`)
+Sometimes two (or more) conditions must be **true** before executing a statement.
+```plaintext
+Example: You are older than 16 **AND** you have a permit → You can drive.
+```
+
+### OR (`||`)
+Example in Processing:
+```java
+if (mouseX < width/3 || mouseX > 2 * width/3) {
+    background(255);
+} else {
+    background(0);
+}
+```
+
+## Negation Logical Operator (`!`)
+In **Processing**, the **negation logical operator** (`!`) inverts the Boolean value of an expression. It returns:
+- `true` if the operand is `false`
+- `false` if the operand is `true`
+
+### Example: Checking User Login
+```java
+String username = "admin";
+String password = "password123";
+
+if (username.equals("admin") && password.equals("password123")) {
+    println("Login successful!");
+} else {
+    println("Invalid username or password.");
+}
+```
+
+### Example:
+```java
+void setup() {
+    boolean isRaining = false;
+    println("Is it raining? " + isRaining);
+
+    // Using the negation operator
+    boolean notRaining = !isRaining;
+    println("Is it NOT raining? " + notRaining);
+}
+```
+#### Output:
+```
+Is it raining? false
+Is it NOT raining? true
+```
+
+## Practice Exercise
+Write a program that checks if a number is **even or odd** using an `if-else` statement.
+
+**Hint**: Use the **modulo operator** `%`.
+
+---
+
+## Definition of the `%` (Modulo) Operator
+The **modulo operator** (`%`) in Processing returns the **remainder** of division between two numbers.
+
+### Syntax:
+```java
+result = a % b;
+```
+- `a` is the **dividend**.
+- `b` is the **divisor**.
+- The result is the remainder when `a` is divided by `b`.
+
+### Example:
+```java
+void setup() {
+    int a = 10;
+    int b = 3;
+    int remainder = a % b;
+
+    println("10 % 3 = " + remainder);  // Output: 10 % 3 = 1
+}
+```
+#### Explanation:
+- `10 / 3 = 3` (quotient), with a remainder of `1`.
+- `10 % 3` results in `1`.
+
+### Solution:
+```java
+int number = 7;
+if (number % 2 == 0) {
+    println("The number is even.");
+} else {
+    println("The number is odd.");
+}
+```
+
+## Boolean Variables
+Boolean variables store results of conditions:
+
+```java
+int age = (int) random(100);
+boolean adult = (age > 21);
+```
+---
+
+This Markdown version preserves the content while keeping it structured and readable. Let me know if you need any refinements! 🚀
