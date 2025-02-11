@@ -3,6 +3,8 @@
 <h2 class="code-line" data-line-start=5 data-line-end=6 ><a id="What_is_an_Algorithm_5"></a>What is an Algorithm?</h2>
 <p class="has-line-data" data-line-start="6" data-line-end="7">An algorithm is a set of steps used to complete a specific task. It serves as a building block for programming. Algorithms allow computers, smartphones, and websites to function and make decisions.</p>
 <p class="has-line-data" data-line-start="8" data-line-end="9"><strong>Example: A Cooking Recipe</strong></p>
+    <p><img src="assets/images/condition0.png" alt="flow chart for cooking recipe" title="cooking recipe" ></p>
+
 <h2 class="code-line" data-line-start=10 data-line-end=11 ><a id="Flow_of_Control_10"></a>Flow of Control</h2>
 <p class="has-line-data" data-line-start="11" data-line-end="12">Flow of control refers to the order in which a program performs actions. Typically, the execution follows a <strong>sequential</strong> order. However:</p>
 <ul>
@@ -19,6 +21,8 @@
 <li class="has-line-data" data-line-start="22" data-line-end="24"><strong>Arrows</strong>: Indicate the flow of control.</li>
 </ul>
 <h3 class="code-line" data-line-start=24 data-line-end=25 ><a id="Example_Rolling_a_Die_Flow_Chart_24"></a>Example: Rolling a Die (Flow Chart)</h3>
+    <p><img src="assets/images/condition1.png" alt="Rolling a Die" title="Rolling a Die" ></p>
+    <p><img src="assets/images/condition2.png" alt="Rolling a Die Flow chart" title="Rolling a Die Flow chart" ></p>
 <h2 class="code-line" data-line-start=26 data-line-end=27 ><a id="Pseudocode_26"></a>Pseudocode</h2>
 <p class="has-line-data" data-line-start="27" data-line-end="28"><strong>Pseudocode</strong> describes an algorithm using structured, human-readable steps without the strict syntax of a programming language. It helps in planning logic before coding.</p>
 <h3 class="code-line" data-line-start=29 data-line-end=30 ><a id="Example_29"></a>Example:</h3>
@@ -95,6 +99,7 @@ println(<span class="hljs-string">"Roll: "</span> + roll);
     <span class="hljs-comment">// Statement(s) to perform if the condition is false</span>
 }
 </code></pre>
+    <p><img src="assets/images/condition3.png" alt="Rolling a Die again" title="Rolling a Die again" ></p>
 <h2 class="code-line" data-line-start=111 data-line-end=112 ><a id="Rolling_a_Die_Updated_Code_111"></a>Rolling a Die: Updated Code</h2>
 <pre><code class="has-line-data" data-line-start="113" data-line-end="122" class="language-java"><span class="hljs-keyword">int</span> roll;
 roll = <span class="hljs-keyword">int</span>(random(<span class="hljs-number">1</span>, <span class="hljs-number">7</span>));
@@ -106,12 +111,17 @@ println(<span class="hljs-string">"Roll: "</span> + roll);
 }
 </code></pre>
 <h2 class="code-line" data-line-start=123 data-line-end=124 ><a id="Nested_ifelseif_Statements_123"></a>Nested <code>if-else-if</code> Statements</h2>
+    <p><img src="assets/images/condition4.png" alt="Rock-Paper-Scizors flow chart" title="Rock-Paper-Scizors" ></p>
 <h2 class="code-line" data-line-start=125 data-line-end=126 ><a id="Logical_Operators_125"></a>Logical Operators:</h2>
 <h3 class="code-line" data-line-start=126 data-line-end=127 ><a id="AND__126"></a>AND (<code>&amp;&amp;</code>)</h3>
 <p class="has-line-data" data-line-start="127" data-line-end="128">Sometimes two (or more) conditions must be <strong>true</strong> before executing a statement.</p>
 <pre><code class="has-line-data" data-line-start="129" data-line-end="131" class="language-plaintext">Example: You are older than 16 **AND** you have a permit → You can drive.
 </code></pre>
+     <p><img src="assets/images/condition5.png" alt="Truth table for AND" title="Truth table for AND" ></p>
 <h3 class="code-line" data-line-start=132 data-line-end=133 ><a id="OR__132"></a>OR (<code>||</code>)</h3>
+
+    <p><img src="assets/images/condition6.png" alt="Truth table for OR" title="Truth table for OR" ></p>
+
 <p class="has-line-data" data-line-start="133" data-line-end="134">Example in Processing:</p>
 <pre><code class="has-line-data" data-line-start="135" data-line-end="141" class="language-java"><span class="hljs-keyword">if</span> (mouseX &lt; width/<span class="hljs-number">3</span> || mouseX &gt; <span class="hljs-number">2</span> * width/<span class="hljs-number">3</span>) {
     background(<span class="hljs-number">255</span>);
